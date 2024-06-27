@@ -10,7 +10,7 @@ resource "google_compute_instance" "testvm" {
     initialize_params {
       image = "debian-cloud/debian-11"
       labels = {
-        my_label = "terraformVM"
+        my_label = "terraform-vm"
       }
     }
   }
