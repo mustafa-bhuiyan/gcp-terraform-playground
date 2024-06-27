@@ -1,7 +1,7 @@
 resource "google_compute_instance" "testvm" {
-  name = "test"
-  zone = "us-central1-a"
-  machine_type = "e2-small"
+  name                      = "test"
+  zone                      = "us-central1-a"
+  machine_type              = "e2-small"
   allow_stopping_for_update = true
 
   tags = ["foo", "bar"]
