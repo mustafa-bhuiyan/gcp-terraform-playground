@@ -1,5 +1,5 @@
 resource "google_compute_instance" "testvm" {
-  name                      = "test"
+  name                      = "test-vm"
   zone                      = "us-central1-a"
   machine_type              = "e2-small"
   allow_stopping_for_update = true
@@ -7,6 +7,7 @@ resource "google_compute_instance" "testvm" {
   tags = ["foo", "bar"]
 
   boot_disk {
+    device_name = "testVM-boot-disk"
     initialize_params {
       image = "debian-cloud/debian-11"
       labels = {
