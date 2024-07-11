@@ -1,0 +1,7 @@
+Testing with gcloud credential:
+
+curl -X POST https://us-central1-sonic-trail-427517-r2.cloudfunctions.net/gcf-helloHttp-tf 
+    -H "Authorization: bearer $(gcloud auth print-identity-token)" 
+    -H "Content-Type: application/json" 
+    -d '{"message": "Hello World!"}'
+
