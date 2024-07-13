@@ -34,3 +34,15 @@ resource "google_compute_subnetwork" "infra-test-vpc-internal-lb-subnetwork" {
   purpose       = "REGIONAL_MANAGED_PROXY" // previous value was "INTERNAL_HTTPS_LOAD_BALANCER
   role          = "ACTIVE"
 }
+
+output "vpc_fully_qualified_id" {
+  value = google_compute_network.infra-test-vpc-network.self_link
+}
+
+output "infra-test-vpc-subnetwork_fully_qualified_id" {
+  value = google_compute_subnetwork.infra-test-vpc-subnetwork.self_link
+}
+
+output "infra-test-vpc-internal-lb-subnetwork_fully_qualified_id" {
+  value = google_compute_subnetwork.infra-test-vpc-internal-lb-subnetwork.self_link
+}
