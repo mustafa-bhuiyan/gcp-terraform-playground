@@ -18,7 +18,8 @@ resource "google_compute_instance" "testvm" {
 
   network_interface {
     // VPC network name
-    network = "default"
+    network = var.vpc-name
+    subnetwork = var.primary-subnet-name
     // access_config will provide an external ip for the vm 
     //so you can access the vm from outside networks ie. from internet or your local pc
     access_config {
